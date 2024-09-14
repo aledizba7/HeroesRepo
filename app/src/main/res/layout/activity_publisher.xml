@@ -32,7 +32,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:fontFamily="@font/toontime"
+                android:fontFamily="@font/librefranklin"
+                android:textFontWeight="900"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -79,6 +80,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <FrameLayout
+            android:id="@+id/frameaboutus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -86,8 +88,11 @@
             android:padding="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/publishers_recyclerview">
+            app:layout_constraintTop_toBottomOf="@id/publishers_recyclerview"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@+id/framenews">
 
             <TextView
                 android:id="@+id/aboutpow"
@@ -110,6 +115,46 @@
                 android:layout_marginTop="50dp"
                 android:fontFamily="@font/librefranklin"
                 android:text="Descubre todo lo que siempre quisiste saber sobre tus personajes favoritos de los cómics y el cine. En Pow encontrarás perfiles detallados de los héroes y villanos más icónicos, desde Superman hasta Spider-Man, pasando por Wonder Woman, Batman, y muchos más. 📚"
+                android:textAlignment="center"
+                android:textColor="@color/coal"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/framenews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/teal"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frameaboutus">
+
+            <TextView
+                android:id="@+id/newsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:fontFamily="@font/toontime"
+                android:paddingBottom="8dp"
+                android:text="Novedades"
+                android:textAlignment="center"
+                android:textColor="@color/bluesky"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/newsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/librefranklin"
+                android:text="Marvel sigue fuerte con sus nuevas historias. Este mes, destaca el regreso de Dazzler, la famosa mutante y cantante pop, quien inicia una gira mundial que promete sorpresas y desafíos. Mientras tanto, el equipo de los X-Men enfrentará nuevos retos en la serie Uncanny X-Men, con personajes icónicos como Wolverine, Gambit y Rogue en acción."
                 android:textAlignment="center"
                 android:textColor="@color/coal"
                 android:textSize="18sp"
