@@ -3,11 +3,11 @@ package com.example.heroesapp.models
 data class Publisher(val id: Int,val name:String,val image:String){
     companion object{
         val publishers = mutableListOf<Publisher>(
-            Publisher(1,"Marvel","https://lovingseries.com/wp-content/uploads/2014/10/marvel-logo-wallpaper.jpg"),
-            Publisher(2,"DC","https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2f45fc20181821.562e702441772.jpg"),
-            Publisher(3,"Dark Horse","https://variety.com/wp-content/uploads/2015/07/dark-horse-comics-logo.jpg?w=681&h=383&crop=1"),
-            Publisher(4,"IDW","https://static.wikia.nocookie.net/transformers/images/5/52/IDW_Logo.png/revision/latest?cb=20230610185915&path-prefix=es"),
-            Publisher(5,"Top Cow","https://static1.cbrimages.com/wordpress/wp-content/uploads/2018/05/top-cow-logo.jpg"),
+            Publisher(1,"Marvel","https://1000marcas.net/wp-content/uploads/2021/07/Marvel-Comics-logo.png"),
+            Publisher(2,"DC","https://seeklogo.com/images/D/dc-comics-logo-8721593E89-seeklogo.com.png"),
+            Publisher(3,"Dark Horse","https://1000logos.net/wp-content/uploads/2020/09/Dark-Horse-Comics-Logo-1991.png"),
+            Publisher(4,"IDW","https://icons.iconarchive.com/icons/dominicanjoker/comic-publisher-folder/512/IDW-icon.png"),
+            Publisher(5,"Top Cow","https://topcow.com/wp-content/uploads/2023/10/Logo-TCP.png"),
         )
     }
 }

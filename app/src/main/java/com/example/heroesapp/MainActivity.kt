@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         passwordInput = findViewById(R.id.passwordET)
         loginBtn = findViewById(R.id.btnLogin)
         loginBtn.setOnClickListener { v->
-            Log.i("AndroidLogGato","Iniciando sesion")
+            Log.i("LOGGED_IN   ","Logging in... :D")
             val email = emailInput.text.toString()
             val password = passwordInput.text.toString()
             Log.i("Email",email)

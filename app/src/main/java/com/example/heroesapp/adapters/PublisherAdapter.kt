@@ -10,11 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.heroesapp.R
 import com.example.heroesapp.models.Publisher
+import com.squareup.picasso.Picasso
 
 class PublisherAdapter(val publisherList : List<Publisher>, val onClick:(Publisher)->Unit)
     : RecyclerView.Adapter<PublisherViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PublisherViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.publisher_item,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.publisher_intro,parent,false)
         return PublisherViewHolder(view)
     }
 
@@ -36,5 +37,5 @@ class PublisherAdapter(val publisherList : List<Publisher>, val onClick:(Publish
 
 class PublisherViewHolder(view: View) : ViewHolder(view){
     val publisherName : TextView = view.findViewById(R.id.publisher_name)
-    val publisherImage : ImageView = view.findViewById(R.id.publisher_image))
+    val publisherImage : ImageView = view.findViewById(R.id.publisher_image)
 }

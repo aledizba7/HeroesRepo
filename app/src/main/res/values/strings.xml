@@ -4,5 +4,6 @@
     <string name="password">Contraseña</string>
     <string name="login">Iniciar sesión</string>
     <string name="welcome">Bienvenido a Pow!</string>
+    <string name="welcome_message">"Hola de nuevo, "</string>
 
 </resources>

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.heroesapp.MainActivity
 import com.example.heroesapp.R
+import com.example.heroesapp.adapters.PublisherAdapter
 import com.example.heroesapp.models.Publisher
 import com.example.heroesapp.models.User
 
@@ -28,18 +29,25 @@ class PublisherActivity : AppCompatActivity() {
         logoutBtn = findViewById(R.id.logoutBtn)
         publishers_recyclerview = findViewById(R.id.publishers_recyclerview)
 
+        val userEmail = sharedPreferences.getString("LOGGED_USER", null)
+
+        val loggedUser = User.users.find { it.email == userEmail }
+        if (loggedUser != null) {
+            usernameTV.text = loggedUser.computedName
+        } else {
+            usernameTV.text = "Hola"
+        }
+
         publishers_recyclerview.adapter = PublisherAdapter(Publisher.publishers){ publisher->
-            Log.i("Publisher redirección", publisher.name)
+            Log.i("The following publisher was clicked: ", publisher.name)
             val intent = Intent(this@PublisherActivity,HeroesActivity::class.java)
-            intent.putExtra("publisherid",publisher.id)
+            intent.putExtra("publisherId",publisher.id)
             startActivity(intent)
         }
         publishers_recyclerview.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
 
-        val user = User.users[1]
-        usernameTV.text = user.computedName
         logoutBtn.setOnClickListener {
-            Log.i("LOGOUT","Cerrando sesion")
+            Log.i("LOGOUT","Logging out... bye :)")
             val editor = sharedPreferences.edit()
             editor.remove("isLogged")
             editor.apply()
