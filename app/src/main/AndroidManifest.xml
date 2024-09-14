@@ -24,6 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.PublisherActivity" />
+        <activity android:name=".activities.HeroesActivity" />
+        <activity android:name=".activities.HeroDetailActivity" />
     </application>
 
 </manifest>

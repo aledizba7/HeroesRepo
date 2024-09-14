@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.heroesapp.R
+import com.example.heroesapp.models.Hero
 import com.squareup.picasso.Picasso
 
 class HeroDetailActivity : AppCompatActivity() {
@@ -18,6 +19,7 @@ class HeroDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_hero_detail)
+        heroImage = findViewById(R.id.hero_image)
         heroNameTV = findViewById(R.id.hero_name)
         heroDescriptionTV = findViewById(R.id.hero_description)
         val heroId = intent.getIntExtra("heroId",0)

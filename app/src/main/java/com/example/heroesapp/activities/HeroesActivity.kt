@@ -12,37 +12,40 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.heroesapp.MainActivity
 import com.example.heroesapp.R
+import com.example.heroesapp.adapters.HeroesAdapter
 import com.example.heroesapp.adapters.PublisherAdapter
+import com.example.heroesapp.models.Hero
 import com.example.heroesapp.models.Publisher
 import com.example.heroesapp.models.User
 import com.squareup.picasso.Picasso
 
 class HeroesActivity : AppCompatActivity() {
-    lateinit var heroNameTV : TextView
-    lateinit var heroRecyclerView : RecyclerView
+    lateinit var publisherNameTV : TextView
+    lateinit var heroesRecyclerView : RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_heroes)
-        heroNameTV = findViewById(R.id.hero_name)
-        heroRecyclerView = findViewById(R.id.hero_recyclerview)
-        val heroId = intent.getIntExtra("heroId",0)
-        Log.i("Heroes Activity","User clicked on Hero: ${heroId}")
+        publisherNameTV = findViewById(R.id.publisher_name)
+        heroesRecyclerView = findViewById(R.id.heroes_recyclerview)
+        val publisherId = intent.getIntExtra("publisherId",0)
+        Log.i("Heroes Activity","User clicker on Publisher: ${publisherId}")
 
-        val hero = Hero.heroes.firstOrNull { hero ->
-            hero.id == heroId
+        val publisher = Publisher.publishers.firstOrNull { publisher ->
+            publisher.id == publisherId
         }
-        Log.i("Hero Activity",hero.toString())
-        heroNameTV.text = hero?.name
+        Log.i("Heroes Activity",publisher.toString())
+        publisherNameTV.text = publisher?.name
+
         val heroes = Hero.heroes.filter { hero ->
-            hero.heroId == heroId
+            hero.publisherId == publisherId
         }
-        Log.i("Hero Activity",heroes.toString())
-        heroRecyclerView.adapter = HeroesAdapter(heroes){ hero->
+        Log.i("Heroes Activity",heroes.toString())
+        heroesRecyclerView.adapter = HeroesAdapter(heroes){ hero->
             val intent = Intent(this@HeroesActivity,HeroDetailActivity::class.java)
             intent.putExtra("heroId",hero.id)
             startActivity(intent)
         }
-        heroRecyclerView.layoutManager = GridLayoutManager(this,2)
+        heroesRecyclerView.layoutManager = GridLayoutManager(this,2)
     }
 }
