@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity() {
             val editor = sharedPreferences.edit()
             editor.putBoolean("isLogged",true)
             editor.apply()
+            Snackbar.make(v,"Log In SUCCESSFUL!", Snackbar.LENGTH_SHORT).show()
             val intent = Intent(this@MainActivity, PublisherActivity::class.java)
             startActivity(intent)
             finish()
