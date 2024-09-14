@@ -13,7 +13,7 @@
         android:id="@+id/loginImg"
         android:layout_width="400dp"
         android:layout_height="250dp"
-        android:src="@drawable/loginImg"
+        android:src="@drawable/imglogin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -27,10 +27,9 @@
         android:layout_height="wrap_content"
         android:text="@string/welcome"
         android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="36dp"
+        android:textSize="40dp"
         android:textColor="@color/floral"
-        android:fontFamily="@font/Comico"
+        android:fontFamily="@font/toontime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginImg"
@@ -40,7 +39,7 @@
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="16dp"
         android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,22 +57,25 @@
                 android:id="@+id/emailET"
                 android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:hint="@string/email"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="20dp" />
 
             <EditText
                 android:id="@+id/passwordET"
                 android:inputType="textPassword"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:hint="@string/password"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="25dp" />
 
             <Button
                 android:id="@+id/btnLogin"
+                android:backgroundTint="@color/lightred"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginBottom="25dp"
+                android:layout_gravity="center"
                 android:text="@string/login" />
         </LinearLayout>
     </FrameLayout>
