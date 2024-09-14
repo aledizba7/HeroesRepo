@@ -58,6 +58,7 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:fontFamily="@font/toontime"
+            android:textColor="@color/bluesky"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -77,20 +78,43 @@
             app:layout_constraintTop_toBottomOf="@+id/publishersTV"
             app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/novedadesTV"
-            android:layout_width="wrap_content"
+        <FrameLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Novedades"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/toontime"
+            android:layout_marginTop="20dp"
+            android:background="@color/sunset"
+            android:padding="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/publishers_recyclerview"
-            />
+            app:layout_constraintTop_toBottomOf="@id/publishers_recyclerview">
+
+            <TextView
+                android:id="@+id/aboutpow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:fontFamily="@font/toontime"
+                android:paddingBottom="8dp"
+                android:text="Sobre Nosotros"
+                android:textAlignment="center"
+                android:textColor="@color/lightred"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/aboutpow_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/librefranklin"
+                android:text="Descubre todo lo que siempre quisiste saber sobre tus personajes favoritos de los cómics y el cine. En Pow encontrarás perfiles detallados de los héroes y villanos más icónicos, desde Superman hasta Spider-Man, pasando por Wonder Woman, Batman, y muchos más. 📚"
+                android:textAlignment="center"
+                android:textColor="@color/coal"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

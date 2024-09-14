@@ -26,6 +26,8 @@
         android:layout_height="wrap_content"
         android:text="Name of Publisher :)"
         android:fontFamily="@font/librefranklin"
+        android:textFontWeight="900"
+        android:textAlignment="center"
         android:textSize="18sp"
         android:layout_gravity="center_horizontal"
         />

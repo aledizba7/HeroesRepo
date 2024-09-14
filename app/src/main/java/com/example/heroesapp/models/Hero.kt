@@ -44,7 +44,7 @@ data class Hero(
                  1),
             Hero(9, "Spider-Man",
                 "Tras ser mordido por una araña radiactiva, Peter desarrolla habilidades arácnidas como fuerza sobrehumana, agilidad y la capacidad de trepar muros. Joven y lleno de responsabilidad, se enfrenta a villanos mientras equilibra su vida como estudiante y superhéroe.",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCQSTfDcmmVHnsGZBk-e_Ej8MbJEKJYMgf4g&s",
+                "https://static.wikia.nocookie.net/marvelfanon/images/1/14/Unlimitednovicespiderman.png/revision/latest?cb=20160124014511&path-prefix=es",
                  1),
             Hero(10, "Bruja Escarlata",
                 "Dotada de habilidades mágicas y psiónicas, Wanda puede manipular la energía, la mente y la realidad misma. Su poder inmenso, ligado al caos y la brujería, la convierte en una de las Vengadoras más fuertes, pero también en una figura trágica por su lucha interna.",

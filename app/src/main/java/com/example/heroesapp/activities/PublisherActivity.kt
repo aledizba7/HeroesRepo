@@ -52,7 +52,7 @@ class PublisherActivity : AppCompatActivity() {
             editor.remove("isLogged")
             editor.apply()
 
-            val intent = Intent(this@PublisherActivity, HeroesActivity::class.java)
+            val intent = Intent(this@PublisherActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
